@@ -1,0 +1,93 @@
+@import url(http://fonts.googleapis.com/css?Roboto);
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #f1f1f1;
+  font-family: Roboto, Helvetica, sans-serif;
+  margin:0 !important;
+  text-align: center;
+}
+
+.material {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  position: relative;
+  text-align: center;
+  color: #4d4d4d;
+  overflow: hidden;
+}
+.material .background {
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  -webkit-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+  -moz-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+  -ms-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+  -o-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+  transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  z-index: 2;
+  background-position: center center;
+  background-size: cover;
+}
+.material .background.active {
+  width: 250vw;
+  height: 150vh;
+  left: 50%;
+  right: 0%;
+  top: -25%;
+  bottom: -25%;
+  z-index: 9;
+  background-color: #2196F3;
+}
+.material .background1 {
+  background: #fff;
+}
+.ion-lightbulb{
+    position: absolute;
+    -webkit-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -moz-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -ms-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -o-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 99;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 25px);
+    font-size: 100px;
+    color:#2196F3;
+    fill:#2196F3;
+}
+.ion-lightbulb.whiteColor{
+    -webkit-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -moz-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -o-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
+    -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+    color:#fff;
+    fill:#fff;
+}
