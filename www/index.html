@@ -24,13 +24,13 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>FlashLight Linterna</title>
     </head>
     <body ng-app="starter" ng-controller="AppCtrl">
         <center>
-          <div class="material" ng-click="flash()">
+          <div class="material" ng-click="flashAndAnimation()">
             <div class="background background1" ng-class="animation ? 'active' : ''"></div><i class="ion-lightbulb" ng-class="animation ? 'whiteColor' : ''"></i>
           </div>
         </center>
@@ -42,15 +42,17 @@
             angular.module('starter', ['starter.controllers', 'ngCordova']);
             var app = angular.module('starter.controllers', []);
 
-            app.controller('AppCtrl', function($scope, $cordovaFlashlight) {
+            app.controller('AppCtrl', function($scope, $cordovaFlashlight, $timeout) {
 
                 $scope.animation = false;
 
-                $scope.flash = function(){
-                    $cordovaFlashlight.toggle()
-                        .then(function (success) {
-                            $scope.animation = !$scope.animation
-                        });
+                function flash(){
+                    $cordovaFlashlight.toggle();
+                }
+
+                $scope.flashAndAnimation = function(){
+                    $scope.animation = !$scope.animation
+                    $timeout(flash, 500);
                 };
 
             });

@@ -13,7 +13,7 @@ html, body {
 .material {
   width: 100vw;
   height: 100vh;
-  background: white;
+  background-color: #4d4d4d;
   position: relative;
   text-align: center;
   color: #4d4d4d;
@@ -21,7 +21,7 @@ html, body {
 }
 .material .background {
   position: absolute;
-  top: 40vh;
+  top: calc(50vh - 95px);
   left: 50vw;
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -29,8 +29,8 @@ html, body {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   -webkit-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
   -moz-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
   -ms-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
@@ -43,6 +43,7 @@ html, body {
   backface-visibility: hidden;
   border-radius: 50%;
   z-index: 2;
+  background-color: #2196F3 !important;
   background-position: center center;
   background-size: cover;
 }
@@ -75,8 +76,8 @@ html, body {
     top: calc(50vh - 75px);
     left: calc(50vw - 25px);
     font-size: 100px;
-    color:#2196F3;
-    fill:#2196F3;
+    color:#fff;
+    fill:#fff;
 }
 .ion-lightbulb.whiteColor{
     -webkit-transition: all 0.6s cubic-bezier(0.280, 0.000, 0.000, 0.995);
